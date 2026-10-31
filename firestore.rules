@@ -1,0 +1,15 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Public travel catalogue: the app needs to read these collections before login.
+    match /{collectionName}/{documentId} {
+      allow read: if collectionName in ['packages', 'stays', 'events', 'destinations', 'offers', 'eventFoodPackages'];
+      // User-specific data can only be accessed by its owner.
+      allow read, create, update, delete: if request.auth != null
+        && (resource == null ? request.resource.data.userId == request.auth.uid : resource.data.userId == request.auth.uid);
+    }
+    match /users/{userId} {
+      allow read, create, update, delete: if request.auth != null && request.auth.uid == userId;
+    }
+  }
+}

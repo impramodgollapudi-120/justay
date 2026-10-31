@@ -1,0 +1,138 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-primary: #DC2626;
+  --color-brand-light: #EF4444;
+  --color-brand-highlight: #F87171;
+  --color-brand-dark: #991B1B;
+  --color-brand-bg: #FFF5F5;
+  --color-brand-text: #450A0A;
+
+  --color-primary: #DC2626;
+  --color-primary-light: #EF4444;
+  --color-primary-highlight: #F87171;
+  --color-app-bg: #FFF5F5;
+  --color-app-text: #450A0A;
+}
+
+:root {
+  --primary-brand: #DC2626;
+  --light-brand: #EF4444;
+  --highlight-brand: #F87171;
+  --dark-brand: #991B1B;
+  --app-bg: #FFF5F5;
+  --app-text: #450A0A;
+}
+
+@layer base {
+  body {
+    background-color: #FFF5F5;
+    color: #450A0A;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+}
+
+.font-brand {
+  font-family: 'Cinzel', 'Plus Jakarta Sans', Georgia, serif;
+}
+
+/* Premium High-End Luxury Red Utility Classes */
+.bg-gradient-brand {
+  background: linear-gradient(135deg, #DC2626 0%, #991B1B 100%);
+}
+
+.bg-gradient-gold {
+  background: linear-gradient(135deg, #D97706 0%, #F59E0B 50%, #B45309 100%);
+}
+
+.bg-gradient-dark {
+  background: linear-gradient(135deg, #450A0A 0%, #991B1B 100%);
+}
+
+.text-gradient-brand {
+  color: #DC2626;
+}
+
+.text-gradient-gold {
+  background: linear-gradient(135deg, #B45309 0%, #D97706 50%, #B45309 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Custom Palette Utility Helpers */
+.bg-primary-gold,
+.bg-primary-brand {
+  background-color: #DC2626;
+}
+.hover\:bg-primary-gold-dark:hover,
+.hover\:bg-primary-brand-dark:hover {
+  background-color: #991B1B;
+}
+.bg-light-gold,
+.bg-light-brand {
+  background-color: #EF4444;
+}
+.bg-highlight-gold,
+.bg-highlight-brand {
+  background-color: #F87171;
+}
+.bg-app-bg {
+  background-color: #FFF5F5;
+}
+.text-primary-gold,
+.text-primary-brand {
+  color: #DC2626;
+}
+.text-light-gold,
+.text-light-brand {
+  color: #EF4444;
+}
+.text-highlight-gold,
+.text-highlight-brand {
+  color: #F87171;
+}
+.text-app-text {
+  color: #450A0A;
+}
+.border-primary-gold,
+.border-primary-brand {
+  border-color: #DC2626;
+}
+.border-light-gold,
+.border-light-brand {
+  border-color: #EF4444;
+}
+.border-highlight-gold,
+.border-highlight-brand {
+  border-color: #F87171;
+}
+.accent-primary-gold,
+.accent-primary-brand {
+  accent-color: #DC2626;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.25s ease-out forwards;
+}

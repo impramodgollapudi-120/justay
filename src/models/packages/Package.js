@@ -1,0 +1,60 @@
+export class Package {
+  constructor({
+    id = '',
+    title = '',
+    subtitle = '',
+    destination = '',
+    duration = '3N / 4D',
+    nights = 3,
+    days = 4,
+    price = 0,
+    originalPrice = 0,
+    rating = 4.9,
+    reviewsCount = 85,
+    badge = 'Best Seller',
+    category = 'all',
+    images = [],
+    overview = '',
+    highlights = [],
+    inclusions = [],
+    exclusions = [],
+    terms = [],
+    policies = [],
+    itinerary = [],
+    destinations = [],
+    sightseeing = [],
+    activities = [],
+    meals = {},
+    transport = {},
+    stay = {},
+  } = {}) {
+    this.id = id;
+    this.title = title;
+    this.subtitle = subtitle;
+    this.destination = destination;
+    this.duration = duration;
+    this.nights = nights;
+    this.days = days;
+    this.price = price;
+    this.originalPrice = originalPrice;
+    this.rating = rating;
+    this.reviewsCount = reviewsCount;
+    this.badge = badge;
+    this.category = category;
+    this.images = images;
+    this.overview = overview;
+    this.highlights = highlights;
+    this.inclusions = inclusions;
+    this.exclusions = exclusions;
+    this.terms = terms;
+    this.policies = policies;
+    this.itinerary = itinerary;
+    this.destinations = destinations;
+    this.sightseeing = sightseeing;
+    this.activities = activities;
+    this.meals = meals;
+    this.transport = transport;
+    this.stay = stay;
+  }
+}
+export default Package;

@@ -1,0 +1,6 @@
+{
+  "name": "JUSTAY - Travel & Hotel Booking",
+  "description": "Premium travel, hotel booking, resort events booking (parties, weddings, celebrations with custom time slots and catering), curated tourism packages with travel preferences, ID proof upload for express check-in, extended stay management, and age verification.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
